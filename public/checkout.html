@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — Ray-Ban Meta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="about.css" />
+<link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="../Rejouice-main/Rejouice-main/index.html" style="cursor: pointer;">RAYWORKS<span>®</span></a>
+  <nav class="nav-links">
+    <a href="./about.html">About</a>
+    <a href="./checkout.html">Shop</a>
+  </nav>
+  <a href="#pay" class="nav-cta">Checkout →</a>
+</header>
+
+<main class="checkout-wrap">
+
+  <!-- LEFT: Product -->
+  <section class="product">
+    <p class="eyebrow"><span class="dot"></span> In stock — ships in 48h</p>
+
+    <h1 class="p-title">Ray-Ban<br/><em>Meta</em> Wayfarer</h1>
+
+    <div class="product-img">
+      <img src="./glasses.jpg" alt="Ray-Ban Meta Wayfarer smart glasses" />
+      <span class="badge">Gen 2</span>
+    </div>
+
+    <div class="specs">
+      <div><span class="label">Camera</span><span class="value">12 MP ultra-wide</span></div>
+      <div><span class="label">Audio</span><span class="value">Open-ear, 5 mics</span></div>
+      <div><span class="label">Battery</span><span class="value">4h active · 32h case</span></div>
+      <div><span class="label">Weight</span><span class="value">12 g</span></div>
+      <div><span class="label">Connectivity</span><span class="value">Bluetooth 5.3 · Wi-Fi 6</span></div>
+      <div><span class="label">AI</span><span class="value">Meta AI on-device</span></div>
+    </div>
+
+    <p class="desc">
+      The most personal computer you'll ever wear. Capture, listen, ask —
+      without ever pulling out a phone. Hand-assembled in Italy, tuned in Cairo.
+    </p>
+  </section>
+
+  <!-- RIGHT: Checkout -->
+  <aside class="checkout" id="pay">
+
+    <p class="section-tag">(01) Your order</p>
+    <div class="line">
+      <div>
+        <p class="line-name">Ray-Ban Meta Wayfarer</p>
+        <p class="line-meta">Matte Black · Polarized G15</p>
+      </div>
+      <span class="price">$379</span>
+    </div>
+    <div class="line subtle">
+      <span>Express shipping</span><span>Free</span>
+    </div>
+    <div class="line subtle">
+      <span>Tax (est.)</span><span>$32.20</span>
+    </div>
+    <div class="line total">
+      <span>Total</span><span>$411.20</span>
+    </div>
+
+    <form id="pay-form" novalidate>
+
+      <p class="section-tag">(02) Contact</p>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+        <span class="error-message" id="email-error"></span>
+      </div>
+
+      <p class="section-tag">(03) Ship to</p>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required />
+        <span class="error-message" id="name-error"></span>
+      </div>
+      <div class="grid-2">
+        <div class="field">
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">Select country</option>
+            <option>Egypt</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>France</option>
+            <option>Germany</option>
+            <option>Italy</option>
+            <option>UAE</option>
+            <option>Saudi Arabia</option>
+            <option>Japan</option>
+            <option>Australia</option>
+          </select>
+          <span class="error-message" id="country-error"></span>
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <input id="city" name="city" type="text" required />
+          <span class="error-message" id="city-error"></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="address">Street address</label>
+        <input id="address" name="address" type="text" required />
+        <span class="error-message" id="address-error"></span>
+      </div>
+      <div class="grid-2">
+        <div class="field">
+          <label for="zip">Postal code</label>
+          <input id="zip" name="zip" type="text" required />
+          <span class="error-message" id="zip-error"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required />
+          <span class="error-message" id="phone-error"></span>
+        </div>
+      </div>
+
+      <p class="section-tag">(04) Payment</p>
+      <div class="field">
+        <label for="card">Card number</label>
+        <input id="card" name="card" type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" maxlength="19" required />
+        <span class="error-message" id="card-error"></span>
+      </div>
+      <div class="grid-2">
+        <div class="field">
+          <label for="exp">Expiry</label>
+          <input id="exp" name="exp" type="text" placeholder="MM / YY" maxlength="7" required />
+          <span class="error-message" id="exp-error"></span>
+        </div>
+        <div class="field">
+          <label for="cvc">CVC</label>
+          <input id="cvc" name="cvc" type="text" inputmode="numeric" placeholder="123" maxlength="4" required />
+          <span class="error-message" id="cvc-error"></span>
+        </div>
+      </div>
+
+      <button type="submit" class="pay-btn">
+        <span>Pay $411.20</span>
+        <span class="arrow">→</span>
+      </button>
+
+      <p class="fineprint">
+        Secured payment · 30-day returns · 2-year warranty
+      </p>
+    </form>
+
+  </aside>
+
+</main>
+
+<div class="success" id="success">
+  <div class="success-card">
+    <p class="eyebrow"><span class="dot"></span> Order confirmed</p>
+    <h2>Thank you,<br/><em id="success-name">friend</em>.</h2>
+    <p>Your Ray-Ban Meta is on the way to <span id="success-loc">your address</span>.</p>
+    <a href="/about.html" class="cta-link">Back to studio <span>↗</span></a>
+  </div>
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try It — Ray-Ban Meta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PP+Neue+Montreal&family=Inter:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="./try.css">
+</head>
+<body>
+    <header class="try-nav">
+      <a class="try-logo" href="../Rejouice-main/Rejouice-main/index.html" style="cursor: pointer;">RAYWORKS<span>®</span></a>
+      <a class="try-shop" href="./checkout.html">Shop now →</a>
+    </header>
+
+    <div class="container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+        <div id="three-canvas"></div>
+        <div id="status">Loading MediaPipe...</div>
+    </div>
+
+    <p class="try-hint">Move your hands in front of the camera ✦ pinch to resize ✦ tap to recolor</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./try.js"></script>
+</body>
+</html>

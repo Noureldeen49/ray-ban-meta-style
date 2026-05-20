@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#webcam {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1); /* Mirror the webcam feed */
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1); /* Mirror the canvas to match webcam */
+    pointer-events: none;
+}
+
+#three-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+#status {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+#links-para {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+a {
+    color: #0000FF !important;
+}
+
+/* Rayworks branded overlay */
+.try-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 32px;
+  z-index: 50;
+  mix-blend-mode: difference;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+.try-logo {
+  font-family: 'PP Neue Montreal', 'Inter', sans-serif;
+  font-size: 20px; font-weight: 500; letter-spacing: -0.02em;
+  text-decoration: none; color: inherit;
+}
+.try-logo span { font-size: 11px; vertical-align: super; opacity: .6; }
+.try-shop {
+  color: inherit; text-decoration: none; font-size: 14px;
+  border: 1px solid currentColor; padding: 10px 20px; border-radius: 999px;
+  transition: background .25s, color .25s;
+}
+.try-shop:hover { background: #ff5b1f; border-color: #ff5b1f; color: #fff; }
+
+.try-hint {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  margin: 0;
+  font-family: 'Inter', sans-serif; font-size: 12px;
+  color: #fff; background: rgba(0,0,0,0.45);
+  padding: 10px 18px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+#status {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  background: rgba(0,0,0,0.55) !important;
+  border: 1px solid rgba(255,255,255,0.15);
+  top: 90px !important;
+  left: 32px !important;
+}
